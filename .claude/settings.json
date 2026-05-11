@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install *)",
+      "Bash(.venv/bin/python -c \"import fastapi, uvicorn, supabase, httpx, pydantic; print\\('all imports ok'\\)\")",
+      "Bash(.venv/bin/python -c ' *)",
+      "Bash(npx create-next-app@latest frontend --typescript --tailwind --app --no-src-dir --no-eslint --import-alias \"@/*\")",
+      "Bash(npx shadcn@latest init --yes)",
+      "Bash(npx shadcn@latest add button input badge drawer dialog card separator scroll-area select textarea tooltip --yes)",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s -H \"X-User-Id: test-user-001\" http://localhost:8000/api/watchlist)",
+      "Bash(curl -s -H \"X-User-Id: test-user-001\" http://localhost:8000/api/tracker)",
+      "Bash(curl -s -H \"X-User-Id: test-user-001\" http://localhost:8000/api/progress)",
+      "Bash(curl -s -X POST http://localhost:8000/api/watchlist -H 'X-User-Id: test-user-001' -H 'Content-Type: application/json' -d '{\"id\": \"google\", \"name\": \"Google\", \"logo_url\": null}')",
+      "Bash(curl -s -X POST http://localhost:8000/api/tracker -H 'X-User-Id: test-user-001' -H 'Content-Type: application/json' -d '{\"company_name\":\"Google\",\"role_title\":\"Software Engineer\",\"status\":\"applied\",\"location\":\"Remote\",\"salary\":\"$150k\"}')",
+      "Bash(curl -s -X PUT http://localhost:8000/api/tracker/934cae10-994f-4e62-91e7-d664d0d83042 -H 'X-User-Id: test-user-001' -H 'Content-Type: application/json' -d '{\"status\":\"interview\",\"notes\":\"First round scheduled\"}')",
+      "Bash(curl -s -H \"X-User-Id: test-user-001\" \"http://localhost:8000/api/jobs?company=Google\")",
+      "Bash(curl -s -X DELETE -H \"X-User-Id: test-user-001\" http://localhost:8000/api/watchlist/google -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(curl -sv -H \"X-User-Id: test-user-001\" \"http://localhost:8000/api/jobs?company=Google\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/)",
+      "Bash(curl -s -H 'X-User-Id: test-user-001' http://localhost:8000/api/watchlist)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/companies)",
+      "Bash(curl -s http://localhost:3000/feed)"
+    ]
+  }
+}
