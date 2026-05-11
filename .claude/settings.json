@@ -25,7 +25,12 @@
       "Bash(curl -s -H 'X-User-Id: test-user-001' http://localhost:8000/api/watchlist)",
       "Bash(curl -s http://localhost:3000/)",
       "Bash(curl -s http://localhost:3000/companies)",
-      "Bash(curl -s http://localhost:3000/feed)"
+      "Bash(curl -s http://localhost:3000/feed)",
+      "Bash(rm -rf frontend/.git)",
+      "Bash(git rm *)"
+    ],
+    "additionalDirectories": [
+      "/home/daniyalareeb/MyProjects/JobsTrack/frontend/.git"
     ]
   }
 }
